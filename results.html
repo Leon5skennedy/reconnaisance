@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recon-ng Reconnaissance Report</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+function showhide(id) {
+    obj = document.getElementById(id);
+    hide = document.getElementById("hide-" + id);
+    show = document.getElementById("show-" + id);
+    if (obj.style.display == "none") {
+        show.removeAttribute('style');
+        hide.removeAttribute('style');
+        obj.removeAttribute('style');
+    } else {
+        obj.style.display = "none";
+        hide.style.display = "none";
+        show.style.display = "inline";
+    }
+}
+function start() {
+    tables = document.getElementsByName("table");
+    for (i = 0; i < tables.length; ++i) {
+        showhide(tables[i].id);
+    }
+}
+</script>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75em;
+}
+.main {
+    width: 1000px;
+    padding: 0 10px;
+    /*text-align: center;*//*centers all the elements on the page*/
+    display: table;
+    margin: 0 auto;
+    border: 2px solid gray;
+    position: relative;
+}
+.title {
+    font-size: 3em;
+}
+.subtitle {
+    font-size: 2em;
+}
+.link {
+    font-size: 1em;
+    position: absolute;
+    right: 12px;
+    top: 5px;
+}
+p {
+    margin: 5px 7px 5px 7px;
+}
+table, div {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.container {
+    display:inline-block;
+    text-align: left; /*left justifies the table caption*/
+    border: 2px solid gray;
+    margin: 0 0 10px 0;
+    width: 100%; /*expands tables all the way across*/
+}
+table {
+    border-spacing: 10px 5px;
+    margin: -5px auto 5px auto;
+    text-align: left;
+}
+th {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+.leak {
+    margin: 10px 0;
+}
+a[id*="-"] {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+a[id*="show-"] {
+    display: none;
+}
+.footer {
+    text-align: center;
+}
+.centered {
+    text-align: center;
+}
+</style>
+</head>
+<body onload="start();">
+    <div class="main">
+        <div class='title'>Facebook</div>
+        <div class='subtitle'>Recon-ng Reconnaissance Report</div>
+        <div class='link'><a href='http://www.recon-ng.com' target="_blank">www.recon-ng.com</a></div>
+        <hr>
+        <div>
+<!-- START -->
+<div class="container">
+<a id="show-summary" href="javascript:showhide('summary');"><p>[+] Summary</p></a>
+<a id="hide-summary" href="javascript:showhide('summary');"><p>[-] Summary</p><hr></a>
+<table id="summary">
+<tr><th>table</th><th>count</th></tr>
+<tr><td>domains</td><td class="centered">1</td></tr>
+<tr><td>companies</td><td class="centered">0</td></tr>
+<tr><td>netblocks</td><td class="centered">0</td></tr>
+<tr><td>locations</td><td class="centered">0</td></tr>
+<tr><td>vulnerabilities</td><td class="centered">0</td></tr>
+<tr><td>ports</td><td class="centered">0</td></tr>
+<tr><td>hosts</td><td class="centered">477</td></tr>
+<tr><td>contacts</td><td class="centered">2</td></tr>
+<tr><td>credentials</td><td class="centered">0</td></tr>
+<tr><td>leaks</td><td class="centered">0</td></tr>
+<tr><td>pushpins</td><td class="centered">0</td></tr>
+<tr><td>profiles</td><td class="centered">0</td></tr>
+<tr><td>repositories</td><td class="centered">0</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-domains" href="javascript:showhide('domains');"><p>[+] Domains</p></a>
+<a id="hide-domains" href="javascript:showhide('domains');"><p>[-] Domains</p><hr></a>
+<table name="table" id="domains">
+<tr><th>domain</th><th>notes</th><th>module</th></tr>
+<tr><td>facebook.com</td><td>For Demo</td><td>user_defined</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-hosts" href="javascript:showhide('hosts');"><p>[+] Hosts</p></a>
+<a id="hide-hosts" href="javascript:showhide('hosts');"><p>[-] Hosts</p><hr></a>
+<table name="table" id="hosts">
+<tr><th>host</th><th>ip_address</th><th>region</th><th>country</th><th>latitude</th><th>longitude</th><th>notes</th><th>module</th></tr>
+<tr><td>0.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>0.facebook.com</td><td>157.240.16.36</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>0.facebook.com</td><td>157.240.242.37</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>about.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>about.facebook.com</td><td>157.240.16.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>about.facebook.com</td><td>157.240.242.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ads.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ads.facebook.com</td><td>157.240.16.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ads.facebook.com</td><td>157.240.242.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>alpha.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>alpha.facebook.com</td><td>157.240.16.9</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>alpha.facebook.com</td><td>157.240.242.8</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>an.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>an.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>an.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apollo.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apollo.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apollo.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apple.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apple.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apple.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apps.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apps.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apps.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>asia.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>az.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>az.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>az.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>balance.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>balance.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>balance.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bd.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bd.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bd.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>beta.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>beta.facebook.com</td><td>157.240.16.9</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>beta.facebook.com</td><td>157.240.242.8</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>blog.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>blog.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>blog.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bm.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bm.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bm.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bof.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bof.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bof.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bt.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bt.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>bt.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>c.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>c.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>c.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ca.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ca.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ca.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>careers.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>careers.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cg.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cg.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cg.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cgi.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cgi.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cgi.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>checkpoint.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>checkpoint.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>checkpoint.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ci.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ci.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ci.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cisco.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cisco.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cisco.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>citrix.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>citrix.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>citrix.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>code.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>code.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>code.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>community.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>connect.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>connect.facebook.com</td><td>157.240.16.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>connect.facebook.com</td><td>157.240.242.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>crs.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>crs.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>crs.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cs.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cs.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cs.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>d.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>d.facebook.com</td><td>157.240.16.36</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>d.facebook.com</td><td>157.240.242.37</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>de.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>de.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>de.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>design.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>design.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>design.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dev.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dev.facebook.com</td><td>10.110.199.9</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dev.facebook.com</td><td>10.110.231.12</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>develop.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developer.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developer.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developer.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developers.c10r.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developers.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developers.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>developers.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>development.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>development.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>development.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dgw.c10r.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>discovery.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>discovery.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>discovery.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>do.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>do.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>do.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>east.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>east.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>east.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>echo.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>echo.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>echo.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>education.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>education.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>education.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>engineer.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>engineer.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>engineer.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>epsilon.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>epsilon.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>epsilon.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>es.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>es.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>es.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>europe.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>europe.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>europe.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>extern.c10r.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>extern.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>extern.facebook.com</td><td>157.240.16.8</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>extern.facebook.com</td><td>157.240.242.18</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>falcon.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>falcon.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>falcon.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feedback.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feedback.facebook.com</td><td>157.240.16.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>feedback.facebook.com</td><td>157.240.242.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fi.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fi.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fi.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fr.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fr.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fr.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gateway.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gateway.facebook.com</td><td>157.240.16.2</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gateway.facebook.com</td><td>157.240.242.13</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gl.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gl.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>gl.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>h.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>h.facebook.com</td><td>66.220.149.254</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>h.facebook.com</td><td>69.171.252.252</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>headers-regional.vvv.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hello.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hello.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hello.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hp.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hp.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hp.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hr.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hr.facebook.com</td><td>10.110.231.12</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hr.facebook.com</td><td>10.110.143.17</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hu.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hu.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hu.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ibm.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ibm.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ibm.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ie.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ie.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ie.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>india.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>india.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>india.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>inside.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>inside.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>inside.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>intern-regional.vvv.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>intern.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>intern.facebook.com</td><td>157.240.16.8</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>intern.facebook.com</td><td>157.240.242.18</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>internextern.vvv.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>it.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>it.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>it.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>king.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>king.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>king.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>kr.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>kr.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>kr.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>kw.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>kw.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>kw.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ky.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ky.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ky.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>l.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>l.facebook.com</td><td>157.240.16.36</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>l.facebook.com</td><td>157.240.242.37</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lasvegas.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lasvegas.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lasvegas.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>latest.c10r.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lb.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lb.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>lb.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>link.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>link.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>link.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>login.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>m.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>m.facebook.com</td><td>157.240.16.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>m.facebook.com</td><td>157.240.242.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>madrid.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>madrid.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>madrid.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>michigan.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>michigan.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>michigan.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mis.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mis.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mis.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mobile.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mobile.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mobile.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mt.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mt.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mt.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>my.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>my.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>my.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mysql.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mysql.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mysql.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>n.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>n.facebook.com</td><td>157.240.16.36</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>n.facebook.com</td><td>157.240.242.37</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>netapp.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>netapp.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>netapp.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>new.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>new.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>new.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>newjersey.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>newjersey.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>newjersey.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>news.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>news.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>news.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>no.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>no.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>no.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>nokia.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>nokia.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>nokia.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ns.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ns.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ns.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>o.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>o.facebook.com</td><td>157.240.16.36</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>o.facebook.com</td><td>157.240.242.37</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>old.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>old.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>old.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>orange.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>orange.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>orange.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>p.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>p.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>p.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pages.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pages.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pages.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partners.c10r.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partners.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partners.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>partners.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pegasus.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pegasus.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pegasus.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pg.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pg.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pg.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>phi.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>phi.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>phi.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pl.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pl.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pl.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>portal.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>portal.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>portal.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>privacy.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>privacy.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>privacy.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>promo.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>promo.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>promo.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>psi.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>psi.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>psi.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pt.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pt.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pt.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rcs.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rcs.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rcs.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>redhat.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>redhat.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>redhat.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>register.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>register.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>register.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>research.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ro.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ro.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ro.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>san.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>san.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>san.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sanantonio.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sanantonio.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sanantonio.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sd.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sd.facebook.com</td><td>157.240.16.36</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sd.facebook.com</td><td>157.240.242.37</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>secure.c10r.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>secure.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>secure.facebook.com</td><td>157.240.16.13</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>secure.facebook.com</td><td>157.240.242.11</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sim.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sim.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sim.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>solutions.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>solutions.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>solutions.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>splunk.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>splunk.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>splunk.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sprint.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sprint.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sprint.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ssl.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ssl.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ssl.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>st.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>st.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>st.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>star-mini.c10r.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>star.c10r.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>star.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>static.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>static.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>static.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>store.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>studio.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>studio.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>studio.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sv.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sv.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>sv.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>switch.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>switch.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>switch.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>t.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>t.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>t.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tc.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tc.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tc.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>td.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>td.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>td.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tech.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tech.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tech.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>th.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>th.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>th.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>time.facebook.com</td><td>129.134.25.123</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>time.facebook.com</td><td>129.134.29.123</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tm.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tm.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tm.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tools.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tools.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tools.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tr.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tr.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>tr.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>upload.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>upload.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>upload.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>va.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>va.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>va.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vega.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vega.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vega.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vip.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vip.facebook.com</td><td>157.240.16.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vip.facebook.com</td><td>157.240.242.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>voyager.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>voyager.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>voyager.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>w.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>w.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>w.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>web.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>web.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>web.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>webhelp.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>webhelp.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>webhelp.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>webmail.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>webmail.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>webmail.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>work.facebook.com</td><td>157.240.16.13</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>work.facebook.com</td><td>157.240.242.11</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ww.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ww.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ww.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.facebook.com</td><td>157.240.16.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.facebook.com</td><td>31.13.79.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www2.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www2.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www2.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>x.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>x.facebook.com</td><td>157.240.16.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>x.facebook.com</td><td>157.240.242.35</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>yellow.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>yellow.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>yellow.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>z-m.c10r.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>z-m.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>z.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>z.facebook.com</td><td>157.240.16.36</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>z.facebook.com</td><td>157.240.242.37</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>zebra.facebook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>zebra.facebook.com</td><td>157.240.16.16</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>zebra.facebook.com</td><td>157.240.242.14</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-contacts" href="javascript:showhide('contacts');"><p>[+] Contacts</p></a>
+<a id="hide-contacts" href="javascript:showhide('contacts');"><p>[-] Contacts</p><hr></a>
+<table name="table" id="contacts">
+<tr><th>first_name</th><th>middle_name</th><th>last_name</th><th>email</th><th>title</th><th>region</th><th>country</th><th>phone</th><th>notes</th><th>module</th></tr>
+<tr><td></td><td></td><td>Operations</td><td>domain@facebook.com</td><td>Whois contact</td><td>Menlo Park, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Brandon</td><td></td><td>Stout</td><td>bstout@facebook.com</td><td>Whois contact</td><td>Chicago, IL</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+</table>
+</div><br />
+
+<!-- END -->
+        </div>
+        <hr>
+        <p class="footer">Created by: Rahul<br />Fri, May 19 2023 04:41:14</p>
+    </div>
+</body>
+</html>
